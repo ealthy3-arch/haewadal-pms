@@ -1,6 +1,6 @@
-{
+﻿{
   "version": "7.1.0",
   "download_url": "https://ealthy3-arch.github.io/setup.exe",
-  "notes": "안정성 개선 및 Supabase 자동 연동 실행 보강",
+  "notes": "동기화 모드 표시 및 데이터베이스 연결 안정성 개선",
   "released_at": "2026-03-09"
 }
