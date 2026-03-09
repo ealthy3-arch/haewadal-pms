@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- ══ SEO — 네이버·구글 검색 최적화 ══ -->
-  <title>해와달 모텔 PMS | 모텔 전용 객실관리 프로그램 — 무료 다운로드</title>
-  <meta name="description" content="해와달 모텔 PMS는 체크인·체크아웃·노쇼·환불·일마감 정산까지 모텔 업무 전체를 하나의 프로그램으로 관리합니다. 설치 없이 바로 실행, Windows PC 전용, 무료 체험판 제공.">
-  <meta name="keywords" content="모텔 관리 프로그램, 모텔 PMS, 객실 관리 프로그램, 숙박 관리 프로그램, 모텔 체크인, 일마감 정산, 무료 모텔 프로그램, 강릉 모텔, 해와달 모텔">
+  <title>해와달 모텔 PMS | 모텔 전용 객실관리 프로그램 — 월정액 3~4만원</title>
+  <meta name="description" content="해와달 모텔 PMS는 체크인·체크아웃·노쇼·환불·일마감 정산까지 모텔 업무 전체를 하나의 프로그램으로 관리합니다. 설치 없이 바로 실행, Windows PC 전용, 월정액 3~4만원.">
+  <meta name="keywords" content="모텔 관리 프로그램, 모텔 PMS, 객실 관리 프로그램, 숙박 관리 프로그램, 모텔 체크인, 일마감 정산, 모텔 월정액 PMS, 강릉 모텔, 해와달 모텔">
   <meta name="author" content="해와달 모텔 PMS">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://haewadalpms.github.io/">
@@ -34,7 +34,7 @@
     "name": "해와달 모텔 PMS",
     "operatingSystem": "Windows 10, Windows 11",
     "applicationCategory": "BusinessApplication",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+    "offers": { "@type": "Offer", "price": "30000", "priceCurrency": "KRW" },
     "description": "모텔 전용 객실 관리 프로그램. 체크인·체크아웃·노쇼·환불·일마감 정산·직원 권한 관리 기능 포함.",
     "softwareVersion": "7.3",
     "inLanguage": "ko"
@@ -284,6 +284,19 @@
       box-shadow: 0 6px 30px rgba(200,169,110,.4);
     }
     .btn-dl:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(200,169,110,.5); }
+    .btn-dl-secondary {
+      display: inline-flex; align-items: center; gap: .6rem;
+      border: 1.5px solid rgba(255,255,255,.35);
+      color: #fff; background: rgba(255,255,255,.06);
+      padding: .85rem 1.5rem; border-radius: 10px;
+      text-decoration: none; font-weight: 700; font-size: .95rem;
+      transition: background .2s, border-color .2s, transform .2s;
+    }
+    .btn-dl-secondary:hover {
+      border-color: rgba(255,255,255,.7);
+      background: rgba(255,255,255,.12);
+      transform: translateY(-2px);
+    }
     .dl-meta { color: rgba(255,255,255,.45); font-size: .8rem; }
 
     /* ── FAQ ── */
@@ -334,9 +347,8 @@
   <ul>
     <li><a href="#features">기능</a></li>
     <li><a href="#compare">비교</a></li>
-    <li><a href="#pricing">요금제</a></li>
     <li><a href="#faq">FAQ</a></li>
-    <li><a href="#download" class="nav-dl">⬇ 무료 다운로드</a></li>
+    <li><a href="#download" class="nav-dl">⬇ 설치파일 다운로드</a></li>
   </ul>
 </nav>
 
@@ -352,11 +364,10 @@
     <p class="hero-sub">
       체크인부터 일마감 정산까지 — 해와달 PMS 하나로
       복잡한 모텔 업무를 단순하게 만듭니다.<br>
-      <strong style="color:var(--ink);">인터넷 연결 없이</strong> 완전 오프라인으로 작동하며,
       Python·별도 설치 없이 EXE 하나로 바로 실행됩니다.
     </p>
     <div class="hero-btns">
-      <a href="#download" class="btn-primary">⬇&nbsp;&nbsp;무료 다운로드</a>
+      <a href="#download" class="btn-primary">⬇&nbsp;&nbsp;설치파일 다운로드</a>
       <a href="#features" class="btn-secondary">기능 살펴보기 →</a>
     </div>
   </div>
@@ -394,8 +405,8 @@
 <div class="stats-bar">
   <div><span class="num">30개</span><span class="lbl">기본 객실 관리</span></div>
   <div><span class="num">3등급</span><span class="lbl">역할별 권한 분리</span></div>
-  <div><span class="num">100%</span><span class="lbl">인터넷 없이 작동</span></div>
-  <div><span class="num">₩0</span><span class="lbl">기본 무료 사용</span></div>
+  <div><span class="num">100%</span><span class="lbl">오프라인 작동</span></div>
+  <div><span class="num">3~4만원/월</span><span class="lbl">단일 업장 라이선스</span></div>
 </div>
 
 <!-- ══ 기능 ══ -->
@@ -441,10 +452,10 @@
       <h3>PIN 인증 & 접근 로그</h3>
       <p>SHA-256 암호화 PIN으로 안전한 로그인. 모든 작업(체크인·정산·권한 변경)이 시간·사용자와 함께 자동 기록됩니다.</p>
     </div>
-    <div class="feature-card" style="border-color:var(--moon);background:rgba(200,169,110,.06);">
-      <div class="feature-icon" style="background:rgba(200,169,110,.2);">📡</div>
-      <h3>🌟 인터넷 연결 불필요</h3>
-      <p>와이파이·LAN 없이도 100% 작동하는 완전 오프라인 객실관리 시스템입니다. 데이터는 내 PC에만 저장되어 외부 유출 걱정이 없습니다. 정전·통신 장애에도 업무가 중단되지 않습니다.</p>
+    <div class="feature-card">
+      <div class="feature-icon">💾</div>
+      <h3>완전 오프라인 작동</h3>
+      <p>인터넷 없이도 100% 작동. 데이터는 내 PC에만 저장(SQLite). 업데이트도 선택 사항으로 자동 설치 없음.</p>
     </div>
   </div>
 </section>
@@ -467,61 +478,16 @@
       </thead>
       <tbody>
         <tr><td>설치 없이 바로 실행</td><td class="cross">✗</td><td class="cross">✗</td><td class="check">✓</td></tr>
-        <tr><td>무료 사용</td><td class="check">✓</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr><td>무료 사용</td><td class="check">✓</td><td class="cross">✗</td><td class="cross">✗</td></tr>
         <tr><td>실시간 객실 현황</td><td class="cross">✗</td><td class="check">✓</td><td class="check">✓</td></tr>
         <tr><td>노쇼·환불 처리</td><td class="cross">✗</td><td class="check">✓</td><td class="check">✓</td></tr>
         <tr><td>일마감 정산·CSV</td><td class="cross">✗</td><td class="check">✓</td><td class="check">✓</td></tr>
         <tr><td>역할별 권한 관리</td><td class="cross">✗</td><td class="check">✓</td><td class="check">✓</td></tr>
         <tr><td>개인정보 자동 익명화</td><td class="cross">✗</td><td class="cross">✗</td><td class="check">✓</td></tr>
         <tr><td>인터넷 없이 작동</td><td class="check">✓</td><td class="cross">✗</td><td class="check">✓</td></tr>
-        <tr><td>월정액 비용</td><td>없음</td><td>3~15만원/월</td><td><strong>없음</strong></td></tr>
+        <tr><td>월정액 비용</td><td>없음</td><td>3~15만원/월</td><td><strong>3~4만원/월</strong></td></tr>
       </tbody>
     </table>
-  </div>
-</section>
-
-<!-- ══ 요금제 ══ -->
-<section id="pricing" style="background:#fff;">
-  <div class="fade-up" style="text-align:center;">
-    <div class="section-label">Pricing</div>
-    <h2 class="section-title">합리적인 요금제</h2>
-    <p class="section-sub" style="margin:0 auto 3rem;">처음엔 무료로 충분히 써보고, 계속 쓰고 싶으면 업그레이드하세요.</p>
-  </div>
-  <div class="fade-up" style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:700px;margin:0 auto;">
-
-    <!-- 무료 -->
-    <div style="border:1.5px solid var(--border);border-radius:14px;padding:2.2rem;text-align:center;">
-      <div style="font-size:.8rem;font-weight:700;letter-spacing:.1em;color:var(--muted);margin-bottom:.8rem;">FREE</div>
-      <div style="font-family:'Noto Serif KR',serif;font-size:2.6rem;font-weight:900;margin-bottom:.3rem;">무료</div>
-      <div style="color:var(--muted);font-size:.85rem;margin-bottom:1.8rem;">평생 무료</div>
-      <ul style="list-style:none;text-align:left;font-size:.9rem;line-height:2.1;margin-bottom:2rem;">
-        <li>✅ 객실 현황·체크인/아웃</li>
-        <li>✅ 노쇼·환불 처리</li>
-        <li>✅ 일마감 정산·CSV</li>
-        <li>✅ 역할별 권한 관리</li>
-        <li>✅ 인터넷 없이 작동</li>
-        <li>✅ 개인정보 보호</li>
-      </ul>
-      <a href="#download" style="display:block;border:1.5px solid var(--border);border-radius:8px;padding:.8rem;text-decoration:none;color:var(--ink);font-weight:700;transition:background .2s;" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background=''">무료 다운로드</a>
-    </div>
-
-    <!-- 유료 -->
-    <div style="border:2px solid var(--moon);border-radius:14px;padding:2.2rem;text-align:center;position:relative;background:rgba(200,169,110,.04);">
-      <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--moon);color:var(--ink);font-size:.75rem;font-weight:900;padding:.3rem 1rem;border-radius:99px;white-space:nowrap;">⭐ 구독 플랜</div>
-      <div style="font-size:.8rem;font-weight:700;letter-spacing:.1em;color:var(--moon);margin-bottom:.8rem;">PRO</div>
-      <div style="font-family:'Noto Serif KR',serif;font-size:2.6rem;font-weight:900;margin-bottom:.3rem;">₩10,000</div>
-      <div style="color:var(--muted);font-size:.85rem;margin-bottom:1.8rem;">/ 월</div>
-      <ul style="list-style:none;text-align:left;font-size:.9rem;line-height:2.1;margin-bottom:2rem;">
-        <li>✅ 무료 플랜 전체 포함</li>
-        <li>✅ 업데이트 우선 제공</li>
-        <li>✅ 카카오톡 1:1 기술 지원</li>
-        <li>✅ 객실 수·층수 맞춤 설정</li>
-        <li>✅ 모텔명·로고 커스터마이징</li>
-        <li>✅ 요청 기능 개발 우선 반영</li>
-      </ul>
-      <a href="mailto:minkin5296@naver.com?subject=해와달PMS 구독 문의" style="display:block;background:var(--moon);border-radius:8px;padding:.8rem;text-decoration:none;color:var(--ink);font-weight:900;transition:opacity .2s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">구독 문의하기</a>
-    </div>
-
   </div>
 </section>
 
@@ -529,21 +495,26 @@
 <section id="download">
   <div class="fade-up">
     <div class="section-label" style="color:var(--moon2);">Download</div>
-    <h2 class="section-title">지금 바로 무료로<br>시작하세요</h2>
+    <h2 class="section-title">지금 바로 월정액으로<br>도입하세요</h2>
     <p class="section-sub">
       Windows 10 / 11 · 64비트<br>
-      별도 설치·Python·.NET 불필요 — ZIP 압축 해제 후 EXE 바로 실행
+      별도 설치·Python·.NET 불필요 — setup.exe 실행 후 바로 사용
     </p>
     <div class="dl-box">
-      <a href="https://drive.google.com/uc?export=download&id=1PQ7k0BDd6IVboRwRQuwn6DO1s2OIDJzz" class="btn-dl">
+      <a href="setup.exe" download class="btn-dl">
         ⬇&nbsp;&nbsp;해와달 PMS v7.3 다운로드
       </a>
-      <span class="dl-meta">ZIP · 약 64MB · 무료 · Windows 64비트 전용</span>
+      <a href="HaewadalPMS_Supabase_Starter.zip" download class="btn-dl-secondary">
+        ☁️&nbsp;&nbsp;Supabase 연동 스타터 다운로드
+      </a>
+      <span class="dl-meta">setup.exe · 약 64MB · 월정액 3~4만원 · Windows 64비트 전용</span>
+      <span class="dl-meta">Supabase 스타터 · 배치파일 + SQL 스키마 + 연동 가이드 + README 포함</span>
+      <span class="dl-meta">최신 반영: 2026-03-08 · Supabase direct-sync 시작 스크립트 개선</span>
       <span class="dl-meta">
         문의·구매 상담:
-        <a href="mailto:minkin5296@naver.com" style="color:var(--moon2);">minkin5296@naver.com</a>
+        <a href="mailto:minkim5296@naver.com" style="color:var(--moon2);">minkim5296@naver.com</a>
         &nbsp;|&nbsp;
-        카카오톡: <strong style="color:var(--moon2);">minkin5296@naver.com</strong>
+        카카오톡: <strong style="color:var(--moon2);">@해와달PMS</strong>
       </span>
     </div>
   </div>
@@ -558,7 +529,7 @@
   <div class="faq-list fade-up">
     <div class="faq-item">
       <div class="faq-q">설치나 가입이 필요한가요?</div>
-      <div class="faq-a">아니요. ZIP 파일을 내려받아 압축 해제하면 <code>해와달모텔PMS.exe</code> 파일이 있습니다. 이 파일을 더블클릭하면 바로 실행됩니다. Windows Defender 경고가 뜨면 "추가 정보 → 실행"을 선택하시면 됩니다.</div>
+      <div class="faq-a">가입은 필요 없습니다. <code>setup.exe</code>를 실행해 설치한 뒤 바탕화면 아이콘으로 바로 사용하시면 됩니다. Windows Defender 경고가 뜨면 "추가 정보 → 실행"을 선택하시면 됩니다.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">인터넷이 없어도 작동하나요?</div>
@@ -577,8 +548,16 @@
       <div class="faq-a"><code>C:\Users\사용자명\AppData\Roaming\HaeWaDalPMS\motel.db</code> 파일에 저장됩니다. 이 파일을 복사해두면 백업이 됩니다.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q">다른 모텔에도 팔 수 있나요?</div>
-      <div class="faq-a">네, 자유롭게 공유·판매하실 수 있습니다. 로고·모텔명 변경 등 커스터마이징이 필요하시면 문의해 주세요.</div>
+      <div class="faq-q">다른 PC/모바일과 연동할 수 있나요?</div>
+      <div class="faq-a">네. 다운로드 섹션의 <code>Supabase 연동 스타터</code>를 사용하면 여러 기기에서 같은 데이터 기준으로 운영할 수 있습니다. 초기 설정 후 메인 PC에서 자동 동기화로 운영합니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">스타터 배치파일을 눌렀는데 바로 종료돼요</div>
+      <div class="faq-a">최신 스타터 ZIP을 다시 받아 압축 해제 후 <code>SUPABASE_STARTER_README.txt</code>를 먼저 확인해 주세요. 실행 중 오류가 있으면 창이 유지되도록 수정된 버전(2026-03-08)입니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">배포·재판매가 가능한가요?</div>
+      <div class="faq-a">아니요. 본 프로그램은 계약된 사업장 전용 라이선스이며, 무단 복제·재배포·재판매는 금지됩니다. 지점 추가 사용은 별도 계약이 필요합니다.</div>
     </div>
   </div>
 </section>
@@ -586,8 +565,8 @@
 <!-- ══ 푸터 ══ -->
 <footer>
   <p><strong>해와달 모텔 PMS</strong> &nbsp;·&nbsp; v7.3 &nbsp;·&nbsp; Windows 10/11 x64</p>
-  <p>문의: <a href="mailto:minkin5296@naver.com" style="color:var(--moon);">minkin5296@naver.com</a> &nbsp;|&nbsp; 카카오: minkin5296@naver.com</p>
-  <p style="margin-top:.5rem;">© 2026 해와달 PMS. 무료로 사용하고 공유하세요.</p>
+  <p>문의: <a href="mailto:minkim5296@naver.com" style="color:var(--moon);">minkim5296@naver.com</a></p>
+  <p style="margin-top:.5rem;">© 2026 해와달 PMS. 계약된 사업장 외 무단 배포·재판매 금지.</p>
 </footer>
 
 <script>
@@ -598,7 +577,11 @@
     });
   });
 
-  document.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
+  // ── 스크롤 페이드인 ──
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
 </script>
 </body>
 </html>
