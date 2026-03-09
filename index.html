@@ -150,6 +150,14 @@
       font-weight: 800;
       line-height: 1.55;
       letter-spacing: -.01em;
+      display: inline-block;
+      text-decoration: none;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+    }
+    .hero-alert:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(122, 16, 16, .18);
+      background: #ffe0e0;
     }
     .btn-primary {
       display: inline-flex; align-items: center; gap: .5rem;
@@ -410,7 +418,7 @@
       <a href="#download" class="btn-primary">⬇&nbsp;&nbsp;설치파일 다운로드</a>
       <a href="#features" class="btn-secondary">기능 살펴보기 →</a>
     </div>
-    <div class="hero-alert">다운로드가 안 열리면 아래 <strong>구글드라이브 대체 다운로드</strong> 버튼을 눌러주세요.</div>
+    <a href="#download" class="hero-alert">다운로드가 안 열리면 아래 <strong>구글드라이브 대체 다운로드</strong> 버튼을 눌러주세요.</a>
   </div>
 
   <!-- 목업 -->
