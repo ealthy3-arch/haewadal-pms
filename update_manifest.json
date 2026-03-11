@@ -1,9 +1,9 @@
-{
+﻿{
   "version": "7.1.0",
   "download_url": "https://ealthy3-arch.github.io/setup.exe",
   "web_download_url": "https://ealthy3-arch.github.io/HaewadalPMS_Setup_Web.zip",
   "fallback_download_url": "https://drive.usercontent.google.com/download?id=1gE-ZSMRFl4kupYwhqfMDVcaH3CeKEMXa&export=download&confirm=t",
-  "notes": "? ??? ??, ?? ?? ?? ?? ??, ?? ???? ? ?? ??",
+  "notes": "Icon applied, top connection-check button added, window clipping improved for seniors.",
   "released_at": "2026-03-11",
   "sha256_setup_exe": "D59CAC5DBA9827C790BD1759D88AF6CF7BB2FA30C4360CBB0FE7D7A006E93943",
   "sha256_web_zip": "A4223C029A8F46F75DD15843984DD512864EB535EB7465160EF74BBEC7ABC24C"
