@@ -23,14 +23,14 @@
   <meta property="og:description" content="강릉 해와달모텔 공식 홈페이지. 객실 예약 안내와 모텔 PMS 도입 정보를 제공합니다.">
   <meta name="twitter:description" content="강릉 해와달모텔 공식 홈페이지. 객실 예약 안내와 모텔 PMS 도입 정보를 제공합니다.">
   <meta property="og:url" content="https://ealthy3-arch.github.io/">
-  <meta property="og:image" content="https://ealthy3-arch.github.io/og-image.png?v=20260311-installer-logo">
-  <meta property="og:image:alt" content="해와달모텔 PMS Windows Installer 로고">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <meta property="og:image" content="https://ealthy3-arch.github.io/assets/motel_front.webp?v=20260311-realphoto">
+  <meta property="og:image:alt" content="강릉 해와달모텔 실제 건물 외관 사진">
+  <meta property="og:image:width" content="1366">
+  <meta property="og:image:height" content="768">
   <meta property="og:site_name" content="해와달모텔 PMS">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="해와달모텔 | 강릉모텔 예약·모텔 PMS 공식 홈페이지">
-  <meta name="twitter:image" content="https://ealthy3-arch.github.io/og-image.png?v=20260311-installer-logo">
+  <meta name="twitter:image" content="https://ealthy3-arch.github.io/assets/motel_front.webp?v=20260311-realphoto">
   <meta property="og:locale" content="ko_KR">
 
   <!-- ══ 네이버 검색 확인용 ══ -->
@@ -459,6 +459,34 @@
     }
     .stats-bar .lbl { color: rgba(255,255,255,.6); font-size: .85rem; }
 
+    /* ── 실제 매장 사진 ── */
+    #real-photos { background: #fff; }
+    .real-photo-grid {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .real-photo-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 6px 24px rgba(15,17,23,.08);
+    }
+    .real-photo-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+    .real-photo-caption {
+      padding: .85rem 1rem;
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
     /* ── 공통 섹션 ── */
     section { padding: 6rem 5vw; }
     .section-label {
@@ -691,6 +719,25 @@
   <div><span class="num">100%</span><span class="lbl">오프라인 작동</span></div>
   <div><span class="num">3~4만원/월</span><span class="lbl">단일 업장 라이선스</span></div>
 </div>
+
+<!-- ══ 실제 매장 사진 ══ -->
+<section id="real-photos">
+  <div class="fade-up">
+    <div class="section-label">Real Photos</div>
+    <h2 class="section-title"><span class="brand-inline">해와달</span> 실제 매장 사진</h2>
+    <p class="section-sub">홈페이지 이미지가 아닌 실제 촬영 사진입니다. 현장 분위기를 바로 확인할 수 있습니다.</p>
+  </div>
+  <div class="real-photo-grid fade-up">
+    <figure class="real-photo-card">
+      <img src="/assets/motel_front.webp" alt="강릉 해와달모텔 실제 건물 외관 사진" loading="lazy" decoding="async">
+      <figcaption class="real-photo-caption">해와달모텔 건물 외관 (실제 촬영)</figcaption>
+    </figure>
+    <figure class="real-photo-card">
+      <img src="/assets/motel_dog.webp" alt="해와달모텔 입구 반려견 사진" loading="lazy" decoding="async">
+      <figcaption class="real-photo-caption">입구 라운지 반려견 (실제 촬영)</figcaption>
+    </figure>
+  </div>
+</section>
 
 <!-- ══ 기능 ══ -->
 <section id="features">
