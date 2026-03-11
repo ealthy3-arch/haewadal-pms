@@ -232,6 +232,26 @@
       transition: border-color .2s, background .2s;
     }
     .btn-secondary:hover { border-color: var(--ink); background: rgba(0,0,0,.03); }
+    .btn-booking {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: #0b7a43; color: #fff;
+      padding: .95rem 2rem; border-radius: 8px;
+      text-decoration: none; font-weight: 800; font-size: 1.02rem;
+      transition: transform .2s, box-shadow .2s;
+      box-shadow: 0 4px 20px rgba(11,122,67,.28);
+      border: 1px solid rgba(255,255,255,.22);
+    }
+    .btn-booking:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(11,122,67,.36);
+      background: #0f8e4f;
+    }
+    .booking-note {
+      margin-top: .75rem;
+      color: var(--sea2);
+      font-size: .9rem;
+      font-weight: 700;
+    }
 
     /* 히어로 우측 — 앱 목업 */
     .hero-visual {
@@ -477,7 +497,9 @@
     <div class="hero-btns">
       <a href="#download" class="btn-primary">⬇&nbsp;&nbsp;설치파일 다운로드</a>
       <a href="#features" class="btn-secondary">기능 살펴보기 →</a>
+      <a href="https://map.naver.com/p/search/%ED%95%B4%EC%99%80%EB%8B%AC%EB%AA%A8%ED%85%94%20%EA%B0%95%EB%A6%89" class="btn-booking" id="liveReservationBtn" target="_blank" rel="noopener noreferrer" aria-label="실제 모텔 예약 페이지 새 창으로 이동">🏨&nbsp;&nbsp;실제 모텔 예약 바로가기</a>
     </div>
+    <div class="booking-note">예약 버튼을 누르면 실제 예약 페이지가 새 창으로 열립니다.</div>
     <a href="#download" class="hero-alert" aria-label="다운로드 섹션으로 이동">↓ 클릭: 다운로드가 안 열리면 아래 <strong>구글드라이브 대체 다운로드</strong> 버튼을 눌러주세요.</a>
   </div>
 
@@ -727,6 +749,8 @@
     const heroReleaseNotesEl = document.getElementById('heroReleaseNotesMeta');
     const setupBtnEl = document.getElementById('setupDownloadBtn');
     const driveBtnEl = document.getElementById('driveDownloadBtn');
+    const reservationBtnEl = document.getElementById('liveReservationBtn');
+    const defaultReservationUrl = 'https://map.naver.com/p/search/%ED%95%B4%EC%99%80%EB%8B%AC%EB%AA%A8%ED%85%94%20%EA%B0%95%EB%A6%89';
     if (!releaseMetaEl) return;
 
     try {
@@ -740,6 +764,7 @@
       const webDownloadUrl = String(manifest.web_download_url || '').trim();
       const appDownloadUrl = String(manifest.download_url || '').trim();
       const fallbackDownloadUrl = String(manifest.fallback_download_url || '').trim();
+      const reservationUrl = String(manifest.reservation_url || '').trim();
       const preferredDownloadUrl = webDownloadUrl || appDownloadUrl;
 
       if (version) {
@@ -776,6 +801,10 @@
           driveBtnEl.setAttribute('href', fallbackDownloadUrl);
           driveBtnEl.setAttribute('aria-label', `구글드라이브 대체 다운로드 v${version}`);
         }
+        if (reservationBtnEl) {
+          const target = reservationUrl || defaultReservationUrl;
+          reservationBtnEl.setAttribute('href', target);
+        }
       } else {
         releaseMetaEl.textContent = '최신 버전 정보 없음 (update_manifest.json 확인 필요)';
         if (heroReleaseMetaEl) {
@@ -786,6 +815,9 @@
         }
         if (heroReleaseNotesEl) {
           heroReleaseNotesEl.textContent = '최근 변경사항 정보를 확인할 수 없습니다.';
+        }
+        if (reservationBtnEl) {
+          reservationBtnEl.setAttribute('href', defaultReservationUrl);
         }
       }
     } catch (err) {
@@ -798,6 +830,9 @@
       }
       if (heroReleaseNotesEl) {
         heroReleaseNotesEl.textContent = '최근 변경사항 정보를 불러오지 못했습니다.';
+      }
+      if (reservationBtnEl) {
+        reservationBtnEl.setAttribute('href', defaultReservationUrl);
       }
       console.warn('releaseMeta load failed:', err);
     }
