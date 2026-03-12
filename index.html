@@ -165,62 +165,64 @@
       border-radius: 10px;
     }
 
-    .hero {
-      padding: 72px 0 44px;
+    .title-group {
+      padding: 62px 0 30px;
+      text-align: center;
     }
-    .hero-box {
-      background: linear-gradient(135deg, #0f2f49, #16466c 62%, #1a537e);
-      border-radius: 20px;
-      color: #fff;
-      padding: 42px clamp(20px, 4vw, 44px);
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 1.4rem;
-      align-items: center;
-      box-shadow: 0 16px 38px rgba(15, 31, 46, .28);
-    }
-    .hero h1 {
+    .title-kicker {
       margin: 0;
-      font-size: clamp(2rem, 4.2vw, 3.1rem);
-      line-height: 1.2;
+      color: #61788f;
+      font-size: .95rem;
+      font-weight: 900;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+    .title-main {
+      margin: .35rem 0 0;
+      font-size: clamp(1.95rem, 4vw, 3.05rem);
+      line-height: 1.22;
       letter-spacing: -.03em;
+      color: #0f2f49;
       font-weight: 900;
     }
-    .hero p {
-      margin: .8rem 0 1.3rem;
-      font-size: clamp(1.06rem, 2.2vw, 1.25rem);
-      color: #dfe9f2;
+    .title-sub {
+      margin: .85rem 0 1.25rem;
+      font-size: clamp(1.04rem, 2vw, 1.23rem);
+      color: #3d5468;
       font-weight: 500;
     }
-    .hero-meta {
+    .title-meta {
       display: flex;
       flex-wrap: wrap;
-      gap: .5rem;
+      justify-content: center;
+      gap: .55rem;
+      margin-bottom: 1.2rem;
     }
-    .hero-pill {
+    .title-pill {
+      min-height: 44px;
       display: inline-flex;
       align-items: center;
-      min-height: 44px;
-      padding: .45rem .85rem;
-      border: 1px solid rgba(255,255,255,.3);
+      padding: .42rem .9rem;
       border-radius: 10px;
+      border: 1px solid #c5d2df;
+      background: #ffffff;
+      color: #203a52;
       font-size: .98rem;
-      font-weight: 700;
-      color: #f8fbff;
-      background: rgba(255,255,255,.08);
+      font-weight: 800;
     }
-    .hero-img {
+    .title-preview {
+      max-width: 760px;
+      margin: 0 auto;
       border-radius: 14px;
       overflow: hidden;
-      border: 1px solid rgba(255,255,255,.2);
-      background: rgba(255,255,255,.06);
+      border: 1px solid #d3dde8;
+      box-shadow: 0 12px 28px rgba(15,31,46,.10);
     }
-    .hero-img img {
+    .title-preview img {
       width: 100%;
-      height: 100%;
       display: block;
       object-fit: cover;
-      aspect-ratio: 16/10;
+      aspect-ratio: 16/9;
     }
 
     .section-title-wrap {
@@ -247,18 +249,31 @@
       padding: 18px 0 40px;
     }
     .svc-card {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: clamp(16px, 2.2vw, 24px);
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      padding: clamp(6px, 1.5vw, 12px) 0;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1rem 1.3rem;
       align-items: center;
-      margin-bottom: 14px;
-      box-shadow: 0 10px 24px rgba(15,31,46,.08);
+      margin-bottom: 28px;
     }
     .svc-card.reverse .svc-thumb { order: -1; }
+    .svc-desc-wrap {
+      position: relative;
+      padding-left: 22px;
+    }
+    .svc-desc-wrap::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .15rem;
+      width: 8px;
+      height: 74px;
+      border-radius: 10px;
+      background: linear-gradient(180deg, #1f5f8b, #c89b46);
+    }
     .svc-label {
       margin: 0;
       font-size: .98rem;
@@ -285,6 +300,7 @@
       overflow: hidden;
       border: 1px solid #d7e0ea;
       background: #eff4f8;
+      box-shadow: 0 10px 20px rgba(15,31,46,.10);
     }
     .svc-thumb img {
       width: 100%;
@@ -536,12 +552,12 @@
       gap: .5rem;
     }
     .side-tab a, .side-tab button {
-      width: 120px;
-      min-height: 52px;
-      border-radius: 12px;
-      border: 1px solid #c8d5e2;
-      background: #ffffff;
-      color: #143657;
+      width: 128px;
+      min-height: 54px;
+      border-radius: 10px;
+      border: 1px solid #264862;
+      background: #0f2f49;
+      color: #f0f6fd;
       font-size: .95rem;
       font-weight: 800;
       text-decoration: none;
@@ -551,11 +567,10 @@
       text-align: center;
       padding: .4rem;
       cursor: pointer;
-      box-shadow: 0 8px 18px rgba(15,31,46,.12);
+      box-shadow: 0 8px 18px rgba(15,31,46,.22);
     }
 
     @media (max-width: 1024px) {
-      .hero-box { grid-template-columns: 1fr; }
       .svc-card, .svc-card.reverse { grid-template-columns: 1fr; }
       .svc-card.reverse .svc-thumb { order: 0; }
       .point-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -565,7 +580,7 @@
     @media (max-width: 768px) {
       .menu { display: none; }
       .top-nav { height: 66px; }
-      .hero { padding-top: 40px; }
+      .title-group { padding-top: 40px; }
       .btn-row { grid-template-columns: 1fr; }
       .point-grid { grid-template-columns: 1fr; }
       .container { width: min(1160px, calc(100% - 20px)); }
@@ -592,25 +607,24 @@
   </header>
 
   <aside class="side-tab" aria-label="빠른 메뉴">
-    <a href="mailto:minkim5296@naver.com?subject=%ED%95%B4%EC%99%80%EB%8B%AC%20PMS%20%EB%AC%B8%EC%9D%98">문의</a>
-    <a href="tel:0336415557">전화 033-641-5557</a>
-    <button type="button" data-open-quick-menu="true" aria-controls="quickMenuDialog" aria-expanded="false">큰 메뉴 열기</button>
+    <a href="mailto:minkim5296@naver.com?subject=%ED%95%B4%EC%99%80%EB%8B%AC%20PMS%20%EB%AC%B8%EC%9D%98">문의 및 제휴</a>
+    <a href="/pms.html">PMS 소개서</a>
+    <button type="button" data-open-quick-menu="true" aria-controls="quickMenuDialog" aria-expanded="false">빠른 메뉴</button>
     <button type="button" id="goTopBtn">TOP</button>
   </aside>
 
   <main>
-    <section class="hero">
-      <div class="container hero-box">
-        <div>
-          <h1>PMS(예약관리시스템)</h1>
-          <p>단 몇 번의 클릭으로 체크인·체크아웃·노쇼·환불·일마감까지 처리하는<br>해와달모텔 전용 운영 화면입니다.</p>
-          <div class="hero-meta">
-            <span class="hero-pill">Windows 전용</span>
-            <span class="hero-pill">월정액 3~4만원</span>
-            <span class="hero-pill">강릉 해와달 실사용</span>
-          </div>
+    <section class="title-group">
+      <div class="container">
+        <p class="title-kicker">PMS(예약관리시스템)</p>
+        <h1 class="title-main">단 10초만에 컨트롤 가능한 쉽고 빠른 예약관리</h1>
+        <p class="title-sub">체크인·체크아웃·노쇼·환불·일마감까지, 해와달모텔 운영을 한 화면에서 처리합니다.</p>
+        <div class="title-meta">
+          <span class="title-pill">Windows 전용</span>
+          <span class="title-pill">월정액 3~4만원</span>
+          <span class="title-pill">강릉 해와달 실사용</span>
         </div>
-        <div class="hero-img">
+        <div class="title-preview">
           <img src="/assets/motel_front.webp" alt="강릉 해와달모텔 실제 외관">
         </div>
       </div>
