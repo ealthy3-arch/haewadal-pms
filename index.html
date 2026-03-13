@@ -229,16 +229,22 @@
       font-size: 1.2em;
       vertical-align: baseline;
     }
-    nav ul { list-style: none; display: flex; gap: 2rem; }
-    nav ul a { text-decoration: none; color: var(--muted); font-size: .9rem;
-      font-weight: 500; transition: color .2s; }
+    nav ul { list-style: none; display: flex; gap: 1.6rem; }
+    nav ul a { text-decoration: none; color: var(--muted); font-size: 1rem;
+      font-weight: 700; letter-spacing: -.01em; transition: color .2s; }
     nav ul a:hover { color: var(--ink); }
     .nav-dl {
-      background: var(--sea); color: #fff !important;
-      padding: .45rem 1.1rem; border-radius: 6px; font-size: .85rem !important;
-      transition: background .2s !important;
+      color: var(--sea2) !important;
+      background: transparent !important;
+      padding: 0 !important;
+      border-radius: 0 !important;
+      font-size: 1rem !important;
+      font-weight: 800 !important;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color .2s !important;
     }
-    .nav-dl:hover { background: var(--sea2) !important; color: #fff !important; }
+    .nav-dl:hover { color: var(--sea) !important; }
 
     /* ── 히어로 ── */
     .hero {
@@ -765,7 +771,8 @@
     <li><a href="#features">기능</a></li>
     <li><a href="#compare">비교</a></li>
     <li><a href="#faq">FAQ</a></li>
-    <li><a href="#download" class="nav-dl" title="다운로드가 안 열리면 구글드라이브 대체 다운로드 버튼을 사용하세요." aria-label="설치파일 다운로드 섹션으로 이동(실패 시 구글드라이브 대체 다운로드 사용)">⬇ 설치파일 다운로드</a></li>
+    <li><a href="https://www.yeogi.com/domestic-accommodations/63115" class="nav-dl" id="topReservationLink" target="_blank" rel="noopener noreferrer" aria-label="강릉 해와달 예약 페이지 새 창으로 이동">예약 바로가기</a></li>
+    <li><a href="#download" class="nav-dl" title="다운로드가 안 열리면 구글드라이브 대체 다운로드 버튼을 사용하세요." aria-label="설치파일 다운로드 섹션으로 이동(실패 시 구글드라이브 대체 다운로드 사용)">설치파일 다운로드</a></li>
   </ul>
 </nav>
 
@@ -1129,6 +1136,7 @@
     const reservationAgodaBtnEl = document.getElementById('liveReservationAgodaBtn');
     const reservationYanoljaBtnEl = document.getElementById('liveReservationYanoljaBtn');
     const reservationTripBtnEl = document.getElementById('liveReservationTripBtn');
+    const topReservationLinkEl = document.getElementById('topReservationLink');
     const quickMenuReserveEl = document.getElementById('quickMenuReserveLink');
     const defaultReservationUrl = 'https://www.yeogi.com/domestic-accommodations/63115';
     const defaultReservationAgodaUrl = 'https://www.agoda.com/ko-kr/gangneung-dongshin/hotel/gangneung-si-kr.html?msockid=1fb87abeb2b06d8f22d96c75b33c6cf5&cid=-42&ds=JeERfx9pqKsbA%2FWg';
@@ -1190,6 +1198,9 @@
         if (reservationBtnEl) {
           const target = reservationUrl || defaultReservationUrl;
           reservationBtnEl.setAttribute('href', target);
+          if (topReservationLinkEl) {
+            topReservationLinkEl.setAttribute('href', target);
+          }
           if (quickMenuReserveEl) {
             quickMenuReserveEl.setAttribute('href', target);
           }
@@ -1219,6 +1230,9 @@
         }
         if (reservationBtnEl) {
           reservationBtnEl.setAttribute('href', defaultReservationUrl);
+          if (topReservationLinkEl) {
+            topReservationLinkEl.setAttribute('href', defaultReservationUrl);
+          }
           if (quickMenuReserveEl) {
             quickMenuReserveEl.setAttribute('href', defaultReservationUrl);
           }
@@ -1246,6 +1260,9 @@
       }
       if (reservationBtnEl) {
         reservationBtnEl.setAttribute('href', defaultReservationUrl);
+        if (topReservationLinkEl) {
+          topReservationLinkEl.setAttribute('href', defaultReservationUrl);
+        }
         if (quickMenuReserveEl) {
           quickMenuReserveEl.setAttribute('href', defaultReservationUrl);
         }
